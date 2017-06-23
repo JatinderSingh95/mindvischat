@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Mindvis</title>
+ {% load staticfiles %}
+ <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href='{%static "css/app.css" %}'/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" >
+
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" style="color:white " href="#">Mindvis</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right">
+     
+	  <li> {% if user.is_authenticated %}
+	  <li><a href="/admin">Admin <i class="fa fa-user-plus"></i></a></li>
+	  <li><a href="/student">Student<i class="fa fa-user-plus"></i></a>
+	  <li><a href="#">  {{ user.username }}</a></li>
+     <li>  <a href="{% url 'logout' %}"> logout</a></li>
+	 
+       {% else %}
+	  <li><a href="/admin">Admin <i class="fa fa-user-plus"></i></a></li>
+	  <li><a href="/student">Student<i class="fa fa-user-plus"></i></a></li>
+	   <li><a href="/register">Signup <i class="fa fa-user-plus"></i></a></li>
+       <li><a href="{% url 'login' %}">Signin <i class="fa fa-user"></i></a></li>
+	   
+       {% endif %}
+	   
+	   </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class= "container splash" >
+<div class= "row">
+<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3 text-center">
+  <h1>Mindvis </h1>
+  <h3>Chat Room</h3> 
+  <hr> 
+   <div>  <a style="color:white" href="/chat">Lets Have a Chat</a></div>
+
+<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+<script>
+  //Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA4oealQn-jpSXJILnWLVg71wHN30dDeQg",
+    authDomain: "mychat-49e7d.firebaseapp.com",
+    databaseURL: "https://mychat-49e7d.firebaseio.com",
+    projectId: "mychat-49e7d",
+    storageBucket: "mychat-49e7d.appspot.com",
+    messagingSenderId: "1002065468337"
+  };
+  firebase.initializeApp(config);
+</script>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </body>
+
+</html>

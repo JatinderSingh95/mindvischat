@@ -1,0 +1,128 @@
+body {
+	padding-top:100px;
+	background: url('img3.jpg');
+    background-size: cover;  
+	background-position: center;
+	font-family: Lato;
+	color: white;
+	height:100%;
+ 	
+}
+.all-frm label{
+	color:#333;
+}
+#cnt-blk{
+	border:solid 1px #e4e4e4;
+	float:left;
+	padding:10px;
+	background:white;
+	width:100%;
+	color:black;
+	
+}
+#id_timing{
+    padding: 0;
+    float: left;
+    display: block;
+    width: 100%;
+      
+	
+}
+#id_timing label{
+   width:100%;
+      
+	
+}
+#id_timing li{
+   float:left;
+   width:35px;
+   margin-right:20px;
+      
+	
+}
+#id_features{
+   padding: 0;
+    float: left;
+    display: block;
+    width: 100%;
+	
+      
+	
+}
+#id_features label{
+	
+   width:100%;
+      
+	
+}
+#id_features li{
+   float:left;
+   width:45px;
+   margin-right:20px;
+      
+	
+}
+form{
+	color:red;
+}
+
+
+input{
+	max-width:100%;
+}
+#cnt-blk h3,#cnt-blk h5{
+	
+	color:black;
+	
+}
+.container.splash{
+display: table;height: 100%;vertical-align: middle;
+}
+.container.splash .row {
+display: table-cell; vertical-align: middle;
+}
+
+html {
+    height: 100%;
+}
+nav{
+	background:transparent !important;
+	border-color:transparent !important;
+	
+	
+}
+nav li a{
+	color:#ffffff !important;
+	
+}
+nav li a:hover{
+	text-decoration:underline !important;
+	
+}
+nav li.active a {
+  background-color:transparent !important;
+  color:white !important;
+}
+
+#content {
+	 text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+	              0px 8px 13px rgba(0,0,0,0.1),
+				  0px 18px 23px rgba(0,0,0,0.1);
+
+} 
+h1 {
+	font-weight: 700;
+	font-size:5em;
+	margin:0;
+	
+}
+ 
+h3 {
+	color: white;
+ }
+ 
+ hr {
+	
+	 border-top: 1px solid #f8f8f8;
+	 border-bottom:1px solid rgba(0,0,0,0.2);
+ }	 
